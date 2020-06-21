@@ -59,5 +59,34 @@ When you type a URL into a web browser, this is what happens:
 <ol>
     <li>If the URL contains a domain name, the browser first connects to a domain name server and retrieves the corresponding IP address for the web server. </li>
 </ol>
+
+<h3>Hyper Text Markup Language</h3>
+When your internet browser receives an HTTP response package from a web server, the package contains the website you want to see 
+coded in a language called HTML. HTML is used to describe the contents and structure of an website.The browser recognizes this code and renders the site acordingly.
+<br>
+Try it!- Nearly every browser comes with some sort of developer tools. With this we can analyse any website. Just right click on the object 
+(a Headline, an image) and select "inspect element". You will be presented with the HTML code representation of that element.
+
+<h3>JavasScript</h3>
+JavaScript is an clientside scripting language for websites. It can be interpreted by most browser. This means we can
+tell the browser what to do. JavaScript is very important for todays internet. For start we will jus greet our visitor.
+
+Try it!- In the menu of your browser look for "Developer Tools" and select "Web Console". type in the window: 
+alert("Hello World") and press enter.
+
+<h3 id="myheadline">DOM and JavaScript</h3>
+So we have already shown you how to receive a website on your PC. But this process is very static: once the server has send a response, there is no way changes to the webiste can be made. This is really bad for things like browser games
+where you want some game logic executed clientside. To change the contents of a site dynamical we need JavaScript and the Domain Object Model. DOM is a hirachical, tree-like struct which represent elemets on our website. DOM is language-independent which means that a list element 
+has both a representation in HTML (the "&lt;ul&gt;"-tag) and as an object in javascript
+<br><br>
+Try it!- Lets change the site a little bit. Hover over the headline of this paragraph, right-click and select inspect. You will see 
+a HTML tag called h3, a type of headline. You will also see an attribute to this headline called id. This is the identification of our DOM object. 
+We can use this id to get a hold of our headline: <br>
+
+Type in your console: myheadline = document.getElementById("myheadline") <br>
+This will asign the DOM Object of this headline to  a Javascript variable called myheadline. We can now use this variable to modify the object. Type <br>
+myheadline.innerHTML = "This is my new Headline :)" <br>
+Press enter and look what happend to the old headline
+
     </body>
 </html>
