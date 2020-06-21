@@ -56,7 +56,7 @@ One of the most commonly used services on the Internet is the World Wide Web (WW
 HTTP is a connectionless text based protocol. Clients (web browsers) send requests to web servers for web elements such as web pages and images. After the request is serviced by a server, the connection between client and server across the Internet is disconnected. A new connection must be made for each request. Most protocols are connection oriented. This means that the two computers communicating with each other keep the connection open over the Internet. HTTP does not however. Before an HTTP request can be made by a client, a new connection must be made to the server.
 
 When you type a URL into a web browser, this is what happens: 
-<ol>
+<ol id="mylist">
     <li>If the URL contains a domain name, the browser first connects to a domain name server and retrieves the corresponding IP address for the web server. </li>
 </ol>
 
@@ -87,6 +87,13 @@ Type in your console: myheadline = document.getElementById("myheadline") <br>
 This will asign the DOM Object of this headline to  a Javascript variable called myheadline. We can now use this variable to modify the object. Type <br>
 myheadline.innerHTML = "This is my new Headline :)" <br>
 Press enter and look what happend to the old headline
+<br>
+We can also add completely new object to our site. Try:<br>
+mytext = document.createTextNode("hello Im a text node") <br>
+to create a text node. Then type<br>
+document.body.appendChild(mytext)<br>
+to add your text at the bottom of the site.
+
 
     </body>
 </html>

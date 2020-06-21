@@ -1,54 +1,8 @@
 <html>
     <head>
 
-        <script src="Password.js"></script>
+        <script src="PasswordChecker.js"></script>
         <script>
-            //import Password from './Password.js';
-
-            class PasswordChecker {
-                constructor(text)
-                {
-                    this.text = text;
-                }
-                getChecks()
-                {
-                    return [{"label": "At least one Lowercase letter",
-                    "checksOut":(new RegExp("[a-z]")).test(this.text)
-                },
-                {"label": "At least one Uppercase letter",
-                    "checksOut:
-                },
-                {"label": "At least one Special letter",
-                    "checksOut": this.hasSpecialCharacters()
-                },
-                {"label": "At least one Number letter",
-                    "checksOut": this.hasNumbers()
-                },
-                {"label": "At least 6 letters",
-                    "checksOut": (this.getLength() >= 6)
-                }];
-                }
-                hasLowercase()
-                {
-                    return (new RegExp("[a-z]")).test(this.text);
-                }
-                hasUppercase()
-                {
-                    return (new RegExp("[A-Z]")).test(this.text);
-                }
-                hasSpecialCharacters()
-                {
-                    return (new RegExp("[$@$!%*#?&]")).test(this.text);
-                }
-                hasNumbers()
-                {
-                    return (new RegExp("[0-9]")).test(this.text);
-                }
-                getLength()
-                {
-                    return this.text.length;
-                }
-            }
             
             function check_password()
             {
@@ -56,7 +10,7 @@
                 pw = document.getElementById("pw_input").value;
             
                 // Class Password implements the checks
-                var password = new Password(pw);
+                var password = new PasswordChecker(pw);
     
                 result_list = document.getElementById("result_list");
                 
@@ -104,15 +58,12 @@
 
     </head>
 <body onload="check_password()">
+
     <input id="pw_input" oninput="check_password()"/>
     <p id="p_txt">
         Here you can check your password for stength. Please note that all calculation is done localy and all data will stay on your device.
     </p>
     
-
-    <button id="btn_check" value="check" onClick="check_password()" type="button">
-        check
-    </button>
     <ul id="result_list"></ul>
 </body>
 </html>
