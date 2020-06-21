@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body bgcolor="black" style="color: #00ff00">
+        <h1>Internet Security</h1>
+
+        <ul>
+            <li>Abstract</li>
+            <li>Introduction</li>
+            <li>Exploits</li>
+            <li>Protection</li>
+            <li>Password Checker</li>
+            <li>Canvas tracking
+            </li>
+            <li>Glossary</li>
+        </ul>
+       <h2>
+           Introduction
+       </h2>
+<p>Here we want to give you a brief introduction into how the internet works on a day-to-day base. We will explain core 
+    concepts and principals as well as some example technologies. Later we will use that knowledge to try to exploit these mechanisms.
+</p>
+<h3>A way to the web</h3>
+<p>Now we will discuss the most common way of accesing the internet. We want to visit a Webesite using our PC Browser. 
+    A browser is a designated programm for viewing webistes. First we will use the Browser to send a request to a Server. A 
+    A Server is a powerfull Computer which stores our webiste. So we send the Server a message like "Hey Server, can we please see this Website". If 
+    the Server receives that message and answers with "Sure, here you go" and the Website. The website is then rendered by the Browser so 
+    we can see a beautiful graphical site. 
+    <br>
+    Because the internet is a web of many computers, we have to make sure the right server receives our request. We need an easy way to adress uniquely
+    these computers uniquely to get the wanted response. For this the Internet Protocol (IP) is used. An IP adress are 32 bits or four integers betweeen 0 and 255 seperated by digits.
+    If you connect to the Internet through an Internet Service Provider (ISP), you are usually assigned a temporary IP address for the duration of your dial-in session. If you connect to the Internet from a local area network (LAN) your computer might have a permanent IP address or it might obtain a temporary one from a DHCP (Dynamic Host Configuration Protocol) server. In any case, if you are connected to the Internet, your computer has a unique IP address. 
+    Even though an IP adress looks very cryptic one can still find a lot of information about the sende, its location for example. This can be hidden by using an VPN
+    <img src="ruswp_diag1.gif" style="background-color:white;"/>
+</p>
+Try it! - You can check if an computer is connected to the internet using the ping command. Open a terminal(Linux) or a command prompt (Windows) 
+and type in ping htw-dresden.de and press enter. The programm will send messages to the Server and show the responses. You can also see the IP Adress of the URL.
+</p>
+<h3>The OSI protocol stack</h3>
+Of course the process of sending and receiving data is alittle bit more complex than described before. Introducing the 
+Open Systems Interconnection model (OSI model). This model hirachical describes the comunication. 
+<img src="ruswp_diag2.gif" style="background-color:white;"/>
+In this image you can see the the process of sending a message from your computer (client) to another computer (server). The 
+Data package starts at the top of the left stack in the upper most layer, the Application layer. It makes its way down through
+the layers below it. Each layer has its own function and adds information or processes the package acordingly. At the Hardware layer the data gets 
+transmitted via electrical currents and is been send through wires and radio waves to the physical layer of the receiver, where 
+the pakage goes its way through the stack to the application layer. So even though the packet hast to go throu the all layers you can imagine them logically comunication in one layer.
+The layers you see are the Hardware (physical) layer where the bits are transformed into physical signals. The IP layer is 
+responsible for adress resolution. In the Application layer lives the Browser who processes and renders websites. Here it is where the HTPS protocol lives.
+
+<h3 >The Application Layer</h3>
+The application layer is the top most layer and its the most abstract layer. This makes it the most versatile but fragile of all layers.
+One of the most commonly used services on the Internet is the World Wide Web (WWW). The application protocol that makes the web work is Hypertext Transfer Protocol or HTTP. Do not confuse this with the Hypertext Markup Language (HTML). HTML is the language used to write web pages. HTTP is the protocol that web browsers and web servers use to communicate with each other over the Internet. It is an application level protocol because it sits on top of the TCP layer in the protocol stack and is used by specific applications to talk to one another. In this case the applications are web browsers and web servers.
+
+HTTP is a connectionless text based protocol. Clients (web browsers) send requests to web servers for web elements such as web pages and images. After the request is serviced by a server, the connection between client and server across the Internet is disconnected. A new connection must be made for each request. Most protocols are connection oriented. This means that the two computers communicating with each other keep the connection open over the Internet. HTTP does not however. Before an HTTP request can be made by a client, a new connection must be made to the server.
+
+When you type a URL into a web browser, this is what happens: 
+<ol>
+    <li>If the URL contains a domain name, the browser first connects to a domain name server and retrieves the corresponding IP address for the web server. </li>
+</ol>
+    </body>
+</html>
