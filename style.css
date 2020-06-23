@@ -95,3 +95,7 @@ a {
     background-color: #00ff00;
     color: white;
   }
+  * {
+    
+    cursor: url(https://blog.fefe.de/amiga.gif), default;
+  }
