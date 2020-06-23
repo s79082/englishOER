@@ -36,15 +36,21 @@ function buildQuiz() {
             correctAnswer: "d"
         },
         {
-            question: "Wich of the following aspects describes Canvas?",
+            question: "Wich of the following sentences describes a Canvas?",
             answers: {
-                a: "are Images  wich stored on a Web-Server",
+                a: "Is an Image which is stored on a Web-Server",
                 b: "Describes the location of your Internet Device",
-                c: "are Images wich are rendered in in your Browser"
+                c: "Is an Image wich are rendered in in your Browser"
             },
             correctAnswer: "c"
-
-            }
+        },
+        {
+            question: "Is a Cookie a File on your Computer?",
+            answers: {
+                a: "True",
+                b: "False"
+            },
+            correctAnswer: "a"
         }
     ];
     // variable to store the HTML output
@@ -75,7 +81,9 @@ function buildQuiz() {
                 `<div class="question"> ${currentQuestion.question} </div>
           <div class="answers"> ${answers.join('')} </div>`
             );
-        }
+
+        },
+
     );
 
     // finally combine our output list into one string of HTML and put it on the page
@@ -114,6 +122,14 @@ function showResults(){
                 d: "ESLint"
             },
             correctAnswer: "d"
+        },
+        {
+            question: "Java-Script is only used for fingerprinting?",
+            answers: {
+                a: "True",
+                b: "False"
+            },
+            correctAnswer: "a"
         }
     ];
     // gather answer containers from our quiz
