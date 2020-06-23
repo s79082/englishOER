@@ -21,9 +21,9 @@ function buildQuiz() {
             answers: {
                 a: "a program on a server",
                 b: "a file on your computer",
-                c: ""
+                c: "a program on your computer"
             },
-            correctAnswer: "a"
+            correctAnswer: "b"
         },
         {
             question: "Java-Script is only used for fingerprinting?",
@@ -35,23 +35,25 @@ function buildQuiz() {
         },
         {
 
-            question: "A good Password only contains upper-case letters?",
+            question: "Which one of the following strings is the strongest password?",
             answers: {
-                a: "True",
-                b: "False"
+                a: "password123",
+                b: "PAssw0rd12",
+                c: "fr$%xv_*ABxx420"
             },
-            correctAnswer: "b"
+            correctAnswer: "c"
         },
         {
-            question: "The IP-Protocoll is used for encrypting Files?",
+            question: "The Internet Protocol is used for",
             answers: {
-                a: "True",
-                b: "False"
+                a: "addresing computers in a network",
+                b: "encrypting files",
+                c: "drawing images"
             },
-            correctAnswer: "b"
+            correctAnswer: "a"
         },
        {
-           question: "Canvas are always visible on a Website?",
+           question: "Are Canvas always visible on a Website?",
            answers: {
                a: "True",
                b: "False"
