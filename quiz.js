@@ -44,7 +44,7 @@ function buildQuiz() {
             },
             correctAnswer: "c"
 
-            }
+            
         }
     ];
     // variable to store the HTML output

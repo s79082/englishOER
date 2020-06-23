@@ -2,7 +2,14 @@
     color: black;
     background-color: lightcoral;
     padding: 10px;
-
+    margin-top: 10px;
+}
+.example
+{
+    color: black;
+    background-color: lightgreen;
+    padding: 10px;
+    margin-top: 10px;
 }
 body {
     margin: 25px;
@@ -12,7 +19,8 @@ body {
     font-size: 20px;
 	font-family: sans-serif;
 }
-.text {
+a {
+    color: #00ff00;
 }
 
 .img {

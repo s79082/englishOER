@@ -71,7 +71,7 @@
     The layers you see are the Hardware (physical) layer where the bits are transformed into physical signals. The IP
     layer is
     responsible for adress resolution. In the Application layer lives the Browser who processes and renders websites.
-    Here it is where the HTPS protocol lives.
+    Here it is where the HTTP protocol lives.
 
     <h3>The Application Layer</h3>
     The application layer is the top most layer and its the most abstract layer. This makes it the most versatile but
@@ -91,8 +91,23 @@
 
     When you type a URL into a web browser, this is what happens:
     <ol id="mylist">
-        <li>If the URL contains a domain name, the browser first connects to a domain name server and retrieves the
-            corresponding IP address for the web server. </li>
+            <li>If the URL contains a domain name, the browser first connects to a 
+            domain name server and retrieves the corresponding IP address for the 
+            web server. 
+            </li><li>The web browser connects to the web server and sends an HTTP request 
+            (via the protocol stack) for the desired web page. 
+            </li><li>The web server receives the request and checks for the desired page. 
+            If the page exists, the web server sends it. If the server cannot find 
+            the requested page, it will send an HTTP 404 error message.
+            </li><li>The web browser receives the page back and the connection is closed. 
+    
+            </li><li>The browser then parses through the page and looks for other page 
+            elements it needs to complete the web page. These usually include 
+            images, applets, etc. 
+            </li><li>For each element needed, the browser makes additional connections 
+            and HTTP requests to the server for each element. 
+            </li><li>When the browser has finished loading all images, applets, etc. the 
+            page will be completely loaded in the browser window. </li>
     </ol>
 
     <h3>Hyper Text Markup Language</h3>
@@ -100,6 +115,18 @@
     want to see
     coded in a language called HTML. HTML is used to describe the contents and structure of an website.The browser
     recognizes this code and renders the site acordingly.
+    <div class="example">
+        For example, the following HTML code renders a list with one element
+        <div class="code"><code><pre>
+    &lt;ol&gt;<br>
+        &lt;li&gt; Im a list item  &lt;\li&gt; <br>
+    &lt;\ol&gt;</pre>
+        </code></div>
+        result:
+        <ol>
+            <li>Im a list item</li>
+        </ol>
+    </div>
     <div class="tryit">
     Try it!- Nearly every browser comes with some sort of developer tools. With this we can analyse any website. Just
     right click on the object
@@ -112,9 +139,10 @@
     can
     tell the browser what to do. JavaScript is very important for todays internet. For start we will jus greet our
     visitor.
-
+    <div class="tryit">
     Try it!- In the menu of your browser look for "Developer Tools" and select "Web Console". type in the window:
-    alert("Hello World") and press enter.
+    <div class="code"><code> alert("Hello World")</code> </div>and press enter.
+</div>
 
     <h3 id="myheadline">DOM and JavaScript</h3>
     So we have already shown you how to receive a website on your PC. But this process is very static: once the server
