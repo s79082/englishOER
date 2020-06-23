@@ -8,44 +8,70 @@ function buildQuiz() {
     const submitButton = document.getElementById('submit');
     const myQuestions = [
         {
-            question: "Who invented JavaScript?",
+            question: "Which of the following sentences describes a Canvas?",
             answers: {
-                a: "Douglas Crockford",
-                b: "Sheryl Sandberg",
-                c: "Brendan Eich"
-            },
-            correctAnswer: "c"
-        },
-        {
-            question: "Which one of these is a JavaScript package manager?",
-            answers: {
-                a: "Node.js",
-                b: "TypeScript",
-                c: "npm"
-            },
-            correctAnswer: "c"
-        },
-        {
-            question: "Which tool can you use to ensure code quality?",
-            answers: {
-                a: "Angular",
-                b: "jQuery",
-                c: "RequireJS",
-                d: "ESLint"
-            },
-            correctAnswer: "d"
-        },
-        {
-            question: "Wich of the following aspects describes Canvas?",
-            answers: {
-                a: "are Images  wich stored on a Web-Server",
+                a: "Is an Image which is stored on a Web-Server",
                 b: "Describes the location of your Internet Device",
-                c: "are Images wich are rendered in in your Browser"
+                c: "Is an Image which are rendered in in your Browser"
             },
+            correctAnswer: "c"
+        },
+        {
+            question: "Is a Cookie a File on your Computer?",
+            answers: {
+                a: "True",
+                b: "False"
+            },
+            correctAnswer: "a"
+        },
+        {
+            question: "Java-Script is only used for fingerprinting?",
+            answers: {
+                a: "True",
+                b: "False"
+            },
+            correctAnswer: "b"
+        },
+        {
+
+            question: "A good Password only contains upper-case letters?",
+            answers: {
+                a: "True",
+                b: "False"
+            },
+<<<<<<< HEAD
             correctAnswer: "c"
 
             
         }
+=======
+            correctAnswer: "b"
+        },
+        {
+            question: "The IP-Protocoll is used for encrypting Files?",
+            answers: {
+                a: "True",
+                b: "False"
+            },
+            correctAnswer: "b"
+        },
+       {
+           question: "Canvas are always visible on a Website?",
+           answers: {
+               a: "True",
+               b: "False"
+           },
+           correctAnswer: "b"
+       },
+       {
+           question: "Browser extensions can help to minimaze your digital footprint?",
+           answers: {
+               a: "True",
+               b: "False"
+           },
+           correctAnswer: "a"
+       } 
+>>>>>>> 76f7bf04d90103846c0b44a7bf7df538b8b1a165
     ];
     // variable to store the HTML output
     const output = [];
@@ -75,7 +101,9 @@ function buildQuiz() {
                 `<div class="question"> ${currentQuestion.question} </div>
           <div class="answers"> ${answers.join('')} </div>`
             );
-        }
+
+        },
+
     );
 
     // finally combine our output list into one string of HTML and put it on the page
@@ -87,34 +115,67 @@ function showResults(){
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
     const myQuestions = [
+        
         {
-            question: "Who invented JavaScript?",
+            question: "Which of the following sentences describes a Canvas?",
             answers: {
-                a: "Douglas Crockford",
-                b: "Sheryl Sandberg",
-                c: "Brendan Eich"
+                a: "Is an Image which is stored on a Web-Server",
+                b: "Describes the location of your Internet Device",
+                c: "Is an Image which are rendered in in your Browser"
             },
             correctAnswer: "c"
         },
         {
-            question: "Which one of these is a JavaScript package manager?",
+            question: "Is a Cookie a File on your Computer?",
             answers: {
-                a: "Node.js",
-                b: "TypeScript",
-                c: "npm"
+                a: "True",
+                b: "False"
             },
-            correctAnswer: "c"
+            correctAnswer: "a"
         },
         {
-            question: "Which tool can you use to ensure code quality?",
+            question: "Java-Script is only used for fingerprinting?",
             answers: {
-                a: "Angular",
-                b: "jQuery",
-                c: "RequireJS",
-                d: "ESLint"
+                a: "True",
+                b: "False"
             },
-            correctAnswer: "d"
+            correctAnswer: "b"
+        },
+      
+        {
+
+            question: "A good Password only contains upper-case letters?",
+            answers: {
+                a: "True",
+                b: "False"
+            },
+            correctAnswer: "b"
+        },
+        {
+            question: "The IP-Protocoll is used for encrypting Files?",
+            answers: {
+                a: "True",
+                b: "False"
+            },
+            correctAnswer: "b"
+        },
+        {
+            question: "Canvas are always visible on a Website?",
+            answers: {
+                a: "True",
+                b: "False"
+            },
+            correctAnswer: "b"
         }
+        ,
+       {
+           question: "Browser extensions can help to minimaze your digital footprint?",
+           answers: {
+               a: "True",
+               b: "False"
+           },
+           correctAnswer: "a"
+       }
     ];
     // gather answer containers from our quiz
     const answerContainers = quizContainer.querySelectorAll('.answers');

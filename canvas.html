@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h2>
+            Canvas
+        </h2>
+        <div class="text">
+            Canvas is an HTML5 API for rendering Images in your Browser. This means that Images not must be loaded from a Server to show this on a Website. 
+            The Server only give some Java-Script Code wich your Browser renders to an Image.
+            <br>
+            The Tracking- and Ad-Networks develop some tecnologies to use this Canvas API to Fingerprint you and you didnt see that. (Whats fingerprinting?)
+            <br><br>
+             1. With Java-Script you can write Text in Canvas API. After that your Browser render this Text. The Java-Script Code read this rendered Code as an Image and generates a hash value. This Hash Value is unique due to your Browser, CPU, OS, Rendering Software and so on. This method was described  2012 in the paper <a href="https://www.ieee-security.org/TC/W2SP/2012/papers/w2sp12-final4.pdf">Perfect Pixel</a><br>
+            <br>
+            2. a other Method to use the Canvas API to fingerprint you is the Canvas-Font-Printing wich describes the  <a href="https://www.cs.princeton.edu/~arvindn/publications/OpenWPM_1_million_site_tracking_measurement.pdf">OpenWPM Paper</a>
+            . For this they use the "CanvasRenderingContext2D" Objekt with their function "measureText". in the process you do not write a Text in the Canvas API but you identify the size of the Text of different fonts they need when they wirte on the website. 
+            The ClientRects Test from <a href="https://www.browserleaks.com/rects">Browserleak</a> demonstrate this.
+            <br><br>
+            To See this methods into the wild We have make a short sreen captured Video wthen you visit the Website from the German Shipment Service DHL. 
+            At firs you see the Website when you block all Java-Script Code on their Website. Then we enabled their Java-Script Code with the Plug-in "No-Script". 
+            After that the Plugin "CanvasBlocker" pops up an alert for allowing Java-Script on the Website. 
+            Wehen you allowed that you See that "CanvasBlocker" detect the hidden Canvas on the Website. DHL uses this not only on their landing Page.
+            They use this as well on their Shipment Tracing Site. So be aware!
+            <br>
+            <br>
+            <video width="960" height="507" controls>
+                <source src="Canvas Fingerprinting.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video> 
+            <br>
+            <br>
+            The Major Question now is ho you can protect you from this? 
+            <br>
+            For this please visit our <a href="tools.html">Tool Page</a>.
+        </div>
+        <div class="navbar">
+            <a href="index.html" class="active">Home</a>
+           
+          </div>
+    </body>
+</html>
