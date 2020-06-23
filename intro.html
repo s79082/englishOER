@@ -12,45 +12,103 @@
         Introduction
     </h2>
     <div class="text">
-        Here we want to give you a brief introduction into how the internet works on a day-to-day base. We will explain core concepts and principals as well as some example technologies. Later we will use that knowledge to try to exploit these mechanisms.
+        Here we want to give you a brief introduction into how the internet works on a day-to-day base. We will explain
+        core
+        concepts and principals as well as some example technologies. Later we will use that knowledge to try to exploit
+        these mechanisms.
     </div>
     <h3>A way to the web</h3>
     <div class="text">
-        <p>Now we will discuss the most common way of accessing the internet. We want to visit a Website using our PC Browser. A browser is a designated program for viewing websites. First we will use the Browser to send a request to a Server. A Server is a powerful Computer which stores our website. So we send the Server a message like "Hey Server, can we please see this Website". If the Server receives that message and answers with "Sure, here you go" and the Website. The website is then rendered by the Browser so we can see a beautiful graphical site.
+        <p>Now we will discuss the most common way of accesing the internet. We want to visit a Website using our PC
+            browser.
+            A browser is a dedicated programm for viewing websites. First we will use the Browser to send a request to
+            a Server. A
+            A Server is a powerfull Computer which stores our webiste. So we send the Server a message like "Hey Server,
+            can we please see this Website". If
+            the Server receives that message and answers with "Sure, here you go" and the Website. The website is then
+            rendered by the Browser so
+            we can see a beautiful graphical site.
             <br>
-            Because the internet is a web of many computers, we have to make sure the right server receives our request. We need an easy way to address uniquely these computers uniquely to get the wanted response. For this the Internet Protocol (IP) is used. An IP address are 32 bits or four integers between 0 and 255 separated by digits. If you connect to the Internet through an Internet Service Provider (ISP), you are usually assigned a temporary IP address for the duration of your dial-in session. If you connect to the Internet from a local area network (LAN) your computer might have a permanent IP address or it might obtain a temporary one from a DHCP (Dynamic Host Configuration Protocol) server. In any case, if you are connected to the Internet, your computer has a unique IP address. Even though an IP address looks very cryptic one can still find a lot of information about the sender, its location for example. This can be hidden by using an VPN
+            Because the internet is a web of many computers, we have to make sure the right server receives our request.
+            We need an easy way to address uniquely
+            these computers uniquely to get the wanted response. For this the Internet Protocol (IP) is used. An IP
+            address are 32 bits or four integers betweeen 0 and 255 seperated by digits.
+            If you connect to the Internet through an Internet Service Provider (ISP), you are usually assigned a
+            temporary IP address for the duration of your dial-in session. If you connect to the Internet from a local
+            area network (LAN) your computer might have a permanent IP address or it might obtain a temporary one from a
+            DHCP (Dynamic Host Configuration Protocol) server. In any case, if you are connected to the Internet, your
+            computer has a unique IP address.
+            Even though an IP address looks very cryptic one can still find a lot of information about the sender, its
+            location for example.
         </p>
     </div>
     <div class="img">
         <img src="ruswp_diag1.gif"  />
     </div>
     <div class="tryit">
-        Try it! - You can check if an computer is connected to the internet using the ping command. Open a terminal(Linux) or a command prompt (Windows) and type in
-        <div class="code"> <code> ping htw-dresden.de </code></div> 
-        press enter. The program will send messages to the Server and show the responses. You can also see the IP Address of the URL.
+        Try it! - You can check if an computer is connected to the internet using the ping command. Open a
+        terminal(Linux) or a command prompt (Windows)
+        and type in<div class="code"> <code> ping www.htw-dresden.de </code></div> press enter. The programm will send
+        messages to the server
+        and show the responses with some statistics. You can also see the IP Address associated to the URL.
         </p>
     </div>
     <h3>The OSI protocol stack</h3>
-    Of course the process of sending and receiving data is a little bit more complex than described before. Introducing the Open Systems Interconnection model (OSI model). A (communication) Protocol describes the communication via the internet. The OSI model is a stack of these protocols.
+    Of course the process of sending and receiving data is a little bit more complex than described before. We would like to introduce
+    the
+    Open Systems Interconnection model (OSI model). A (comunication) protocol describes the comunication via the
+    internet. The
+    OSI model is a stack of these protocols.
     <div class="img">
         <img src="ruswp_diag2.gif"/></div>
-        In this image you can see the process of sending a message from your computer (client) to another computer (server). The data package starts at the top of the left stack in the upper most layer, the Application layer. It makes its way down through the layers below it. Each layer has its own function and adds information to the package or splits the package accordingly to its function. At the Hardware layer the data gets transmitted via electrical currents and is been send through wires and radio waves to the physical layer of the receiver, where the package makes its way through the stack to the application layer. So even though the packet hast to go through all the layers you can imagine them logically communication in one layer. The layers you see are the Hardware (physical) layer where the bits are transformed into physical signals. The IP layer is responsible for address resolution. In the Application layer lives the Browser who processes and renders websites. Here it is where the HTTP protocol lives.
+    In this image you can see the the process of sending a message from your computer (client) to another computer
+    (server). The
+    data package starts at the top of the left stack in the upper most layer, the Application layer. It makes its way
+    down through
+    the layers below it. Each layer has its own function and adds information to the package or splits the package
+    acordingly to its function. At the Hardware layer the data gets
+    transmitted via electrical currents and is been send through wires and radio waves to the physical layer of the
+    receiver, where
+    the package makes its way through the stack to the application layer. So even though the packet hast to go throu all
+    the layers you can imagine them logically comunication in one layer.
+    The layers you see are the Hardware (physical) layer where the bits are transformed into physical signals. The IP
+    layer is
+    responsible for address resolution. In the Application layer lives the Browser who processes and renders websites.
+    Here it is where the HTTP protocol lives.
 
     <h3>The Application Layer</h3>
-    The application layer is the top most layer and its the most abstract layer. This makes it the most versatile but fragile of all layers. One of the most commonly used services on the Internet is the World Wide Web (WWW). The application protocol that makes the web work is Hypertext Transfer Protocol or HTTP. Do not confuse this with the Hypertext Markup Language (HTML). HTML is the language used to write web pages. HTTP is the protocol that web browsers and web servers use to communicate with each other over the Internet. It is an application level protocol because it sits on top of the TCP layer in the protocol stack and is used by specific applications to talk to one another. In this case the applications are web browsers and web servers. HTTP is a connectionless text based protocol. Clients (web browsers) send requests to web servers for web elements such as web pages and images. After the request is served by a server, the connection between client and server is disconnected. A new connection must be made for each request. Most protocols are connection oriented. This means that the two computers communicating with each other keep the connection open over the Internet. HTTP does not however. Before an HTTP request can be made by a client, a new connection must be made to the server. When you type a URL into a web browser, this is what happens:
-    <ol id="mylist">
-            <li>
-                If the URL contains a domain name, the browser first connects to a domain name server and retrieves the corresponding IP address for the web server. 
-            </li><li>
-                The web browser connects to the web server and sends an HTTP request (via the protocol stack) for the desired web page.
-            </li><li>
-                The web server receives the request and checks for the desired page. If the page exists, the web server sends it. If the server cannot find the requested page, it will send an HTTP 404 error message.
+    The application layer is the top most layer and its the most abstract layer. This makes it the most versatile but
+    fragile of all layers.
+    One of the most commonly used services on the Internet is the World Wide Web (WWW). The application protocol that
+    makes the web work is Hypertext Transfer Protocol or HTTP. Do not confuse this with the Hypertext Markup Language
+    (HTML). HTML is the language used to write web pages. HTTP is the protocol that web browsers and web servers use to
+    communicate with each other over the Internet. It is an application level protocol because it sits on top of the TCP
+    layer in the protocol stack and is used by specific applications to talk to one another. In this case the
+    applications are web browsers and web servers.
 
+    HTTP is a connectionless text based protocol. Clients (web browsers) send requests to web servers for web elements
+    such as web pages and images. After the request is served by a server, the connection between client and server is
+    disconnected. A new connection must be made for each request. Most protocols are connection oriented. This means
+    that the two computers communicating with each other keep the connection open over the Internet. HTTP does not
+    however. Before an HTTP request can be made by a client, a new connection must be made to the server.
+
+    When you type a URL into a web browser, this is what happens:
+    <ol id="mylist">
+            <li>If the URL contains a domain name, the browser first connects to a 
+            domain name server and retrieves the corresponding IP address for the 
+            web server. 
+            </li><li>The web browser connects to the web server and sends an HTTP request 
+            (via the protocol stack) for the desired web page. 
+            </li><li>The web server receives the request and checks for the desired page. 
+            If the page exists, the web server sends it. If the server cannot find 
+            the requested page, it will send an HTTP 404 error message.
             </li><li>The web browser receives the page back and the connection is closed. 
     
-            </li><li>The browser then parses through the page and looks for other page elements it needs to complete the web page. These usually include images, applets, etc.
-            </li><li>
-                For each element needed, the browser makes additional connections and HTTP requests to the server for each element.
+            </li><li>The browser then parses through the page and looks for other page 
+            elements it needs to complete the web page. These usually include 
+            images, applets, etc. 
+            </li><li>For each element needed, the browser makes additional connections 
+            and HTTP requests to the server for each element. 
             </li><li>When the browser has finished loading all images, applets, etc. the 
             page will be completely loaded in the browser window. </li>
     </ol>
@@ -92,16 +150,24 @@
 </div>
 
     <h3 id="myheadline">DOM and JavaScript</h3>
-    So we have already shown you how to receive a website on your PC. But this process is very static: once the server has send a response, there is no way changes to the website can be made. This is really bad for things like browser games where you want some game logic executed clientside. To change the contents of a site dynamical we need JavaScript and the Domain Object Model. DOM is a hierarchical, tree-like struct which represent elements on our website. DOM is language-independent which means that a list element has both a representation in HTML
-     (the "&lt;ul&gt;"-tag) and as an object in javascript
+    So we have already shown you how to receive a website on your PC. But this process is very static: once the server
+    has send a response, there is no way changes to the webiste can be made. This is really bad for things like browser
+    games
+    where you want some game logic executed clientside. To change the contents of a site dynamical we need JavaScript
+    and the Domain Object Model. DOM is a hirachical, tree-like struct which represent elemets on our website. DOM is
+    language-independent which means that a list element
+    has both a representation in HTML (the "&lt;ul&gt;"-tag) and as an object in javascript
 
     <br>
     <div class="img">
     <img src="800px-DOM-model.svg.png" width="500" height="500" />
 </div><br>
 <div class="tryit">
-    Try it!- Lets change the site a little bit. Hover over the headline of this paragraph, right-click and select inspect. You will see a HTML tag called h3, a type of headline. You will also see an attribute to this headline called id. This is the identification of our DOM object. We can use this id to get a hold of our headline:
-     <br>
+    Try it!- Lets change the site a little bit. Hover over the headline of this paragraph, right-click and select
+    inspect. You will see
+    a HTML tag called h3, a type of headline. You will also see an attribute to this headline called id. This is the
+    identification of our DOM object.
+    We can use this id to get a hold of our headline: <br>
 
     Type in your console: <div class="code"><code>myheadline = document.getElementById("myheadline") </code></div>
     This will asign the DOM Object of this headline to a Javascript variable called myheadline. We can now use this
