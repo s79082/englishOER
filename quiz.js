@@ -8,39 +8,11 @@ function buildQuiz() {
     const submitButton = document.getElementById('submit');
     const myQuestions = [
         {
-            question: "Who invented JavaScript?",
-            answers: {
-                a: "Douglas Crockford",
-                b: "Sheryl Sandberg",
-                c: "Brendan Eich"
-            },
-            correctAnswer: "c"
-        },
-        {
-            question: "Which one of these is a JavaScript package manager?",
-            answers: {
-                a: "Node.js",
-                b: "TypeScript",
-                c: "npm"
-            },
-            correctAnswer: "c"
-        },
-        {
-            question: "Which tool can you use to ensure code quality?",
-            answers: {
-                a: "Angular",
-                b: "jQuery",
-                c: "RequireJS",
-                d: "ESLint"
-            },
-            correctAnswer: "d"
-        },
-        {
-            question: "Wich of the following sentences describes a Canvas?",
+            question: "Which of the following sentences describes a Canvas?",
             answers: {
                 a: "Is an Image which is stored on a Web-Server",
                 b: "Describes the location of your Internet Device",
-                c: "Is an Image wich are rendered in in your Browser"
+                c: "Is an Image which are rendered in in your Browser"
             },
             correctAnswer: "c"
         },
@@ -51,7 +23,48 @@ function buildQuiz() {
                 b: "False"
             },
             correctAnswer: "a"
-        }
+        },
+        {
+            question: "Java-Script is only used for fingerprinting?",
+            answers: {
+                a: "True",
+                b: "False"
+            },
+            correctAnswer: "b"
+        },
+        {
+
+            question: "A good Password only contains upper-case letters?",
+            answers: {
+                a: "True",
+                b: "False"
+            },
+            correctAnswer: "b"
+        },
+        {
+            question: "The IP-Protocoll is used for encrypting Files?",
+            answers: {
+                a: "True",
+                b: "False"
+            },
+            correctAnswer: "b"
+        },
+       {
+           question: "Canvas are always visible on a Website?",
+           answers: {
+               a: "True",
+               b: "False"
+           },
+           correctAnswer: "b"
+       },
+       {
+           question: "Browser extensions can help to minimaze your digital footprint?",
+           answers: {
+               a: "True",
+               b: "False"
+           },
+           correctAnswer: "a"
+       } 
     ];
     // variable to store the HTML output
     const output = [];
@@ -95,33 +108,23 @@ function showResults(){
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
     const myQuestions = [
+        
         {
-            question: "Who invented JavaScript?",
+            question: "Which of the following sentences describes a Canvas?",
             answers: {
-                a: "Douglas Crockford",
-                b: "Sheryl Sandberg",
-                c: "Brendan Eich"
+                a: "Is an Image which is stored on a Web-Server",
+                b: "Describes the location of your Internet Device",
+                c: "Is an Image which are rendered in in your Browser"
             },
             correctAnswer: "c"
         },
         {
-            question: "Which one of these is a JavaScript package manager?",
+            question: "Is a Cookie a File on your Computer?",
             answers: {
-                a: "Node.js",
-                b: "TypeScript",
-                c: "npm"
+                a: "True",
+                b: "False"
             },
-            correctAnswer: "c"
-        },
-        {
-            question: "Which tool can you use to ensure code quality?",
-            answers: {
-                a: "Angular",
-                b: "jQuery",
-                c: "RequireJS",
-                d: "ESLint"
-            },
-            correctAnswer: "d"
+            correctAnswer: "a"
         },
         {
             question: "Java-Script is only used for fingerprinting?",
@@ -129,8 +132,43 @@ function showResults(){
                 a: "True",
                 b: "False"
             },
-            correctAnswer: "a"
+            correctAnswer: "b"
+        },
+      
+        {
+
+            question: "A good Password only contains upper-case letters?",
+            answers: {
+                a: "True",
+                b: "False"
+            },
+            correctAnswer: "b"
+        },
+        {
+            question: "The IP-Protocoll is used for encrypting Files?",
+            answers: {
+                a: "True",
+                b: "False"
+            },
+            correctAnswer: "b"
+        },
+        {
+            question: "Canvas are always visible on a Website?",
+            answers: {
+                a: "True",
+                b: "False"
+            },
+            correctAnswer: "b"
         }
+        ,
+       {
+           question: "Browser extensions can help to minimaze your digital footprint?",
+           answers: {
+               a: "True",
+               b: "False"
+           },
+           correctAnswer: "a"
+       }
     ];
     // gather answer containers from our quiz
     const answerContainers = quizContainer.querySelectorAll('.answers');
