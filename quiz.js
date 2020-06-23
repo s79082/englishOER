@@ -34,6 +34,17 @@ function buildQuiz() {
                 d: "ESLint"
             },
             correctAnswer: "d"
+        },
+        {
+            question: "Wich of the following aspects describes Canvas?",
+            answers: {
+                a: "are Images  wich stored on a Web-Server",
+                b: "Describes the location of your Internet Device",
+                c: "are Images wich are rendered in in your Browser"
+            },
+            correctAnswer: "c"
+
+            }
         }
     ];
     // variable to store the HTML output
@@ -110,7 +121,7 @@ function showResults(){
   
     // keep track of user's answers
     let numCorrect = 0;
-  
+  //test
     // for each question...
     myQuestions.forEach( (currentQuestion, questionNumber) => {
   
