@@ -39,12 +39,6 @@ function buildQuiz() {
                 a: "True",
                 b: "False"
             },
-<<<<<<< HEAD
-            correctAnswer: "c"
-
-            
-        }
-=======
             correctAnswer: "b"
         },
         {
@@ -71,7 +65,6 @@ function buildQuiz() {
            },
            correctAnswer: "a"
        } 
->>>>>>> 76f7bf04d90103846c0b44a7bf7df538b8b1a165
     ];
     // variable to store the HTML output
     const output = [];
