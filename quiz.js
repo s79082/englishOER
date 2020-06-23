@@ -17,10 +17,11 @@ function buildQuiz() {
             correctAnswer: "c"
         },
         {
-            question: "Is a Cookie a File on your Computer?",
+            question: "What is a coockie",
             answers: {
-                a: "True",
-                b: "False"
+                a: "a program on a server",
+                b: "a file on your computer",
+                c: ""
             },
             correctAnswer: "a"
         },
