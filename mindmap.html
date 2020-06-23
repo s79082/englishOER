@@ -1,0 +1,40 @@
+<html>
+    <head><meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>jsMind</title>
+        <link type="text/css" rel="stylesheet" href="jsmind-master/style/jsmind.css" />
+        <style type="text/css">
+            #jsmind_container{
+                width:800px;
+                height:500px;
+                border:solid 1px #ccc;
+                /*background:#f4f4f4;*/
+                background:#f4f4f4;
+            }
+        </style></head>
+    <body>
+        <div id="jsmind_container"></div>
+<script type="text/javascript" src="jsmind-master/js/jsmind.js"></script>
+<script type="text/javascript" src="jsmind-master/js/jsmind.draggable.js"></script>
+<script type="text/javascript">
+    function load_jsmind(){
+        var mind = {"meta":{"name":"jsMind","author":"hizzgdev@163.com","version":"0.4.6"},"format":"node_tree","data":{"id":"root","topic":"internet security","expanded":true,"children":[{"id":"2e221613c6d75f1f","topic":"nuihupi","expanded":true,"direction":"right"}]}};
+        var options = {
+            container:'jsmind_container',
+            editable:true,
+            theme:'primary'
+        }
+        var jm = jsMind.show(options,mind);
+        jm.set_readonly(true);
+        // var mind_data = jm.get_data();
+        // alert(mind_data);
+        //jm.add_node("sub2","sub23", "new node", {"background-color":"red"});
+        //jm.set_node_color('sub21', 'green', '#ccc');
+    }
+
+    load_jsmind();
+</script>
+    </body>
+</html>

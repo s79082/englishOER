@@ -12,13 +12,13 @@ class PasswordChecker {
         "checksOut":(new RegExp("[A-Z]")).test(this.text)
     },
     {"label": "At least one Special letter",
-        "checksOut": (new RegExp("[$@$!%*#?&]")).test(this.text)
+        "checksOut": (new RegExp("[$@$!%*#?&\\[\\]\\(\\)]")).test(this.text)
     },
     {"label": "At least one Number letter",
         "checksOut": (new RegExp("[0-9]")).test(this.text)
     },
-    {"label": "At least 8 letters",
-        "checksOut": (this.text.length >= 8)
+    {"label": "At least 12 letters",
+        "checksOut": (this.text.length >= 12)
     }];
     }
 
