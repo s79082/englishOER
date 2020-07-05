@@ -99,3 +99,11 @@ a {
     
     cursor: url(https://blog.fefe.de/amiga.gif), default;
   }
+  table, th, td {
+    border: 1px solid lightcoral;
+    border-collapse: collapse;
+
+  }
+  th, td {
+    padding: 15px;
+  }

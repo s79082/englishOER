@@ -6,50 +6,37 @@
     <script src="PasswordChecker.js"></script>
     <script>
 
-        function check_password() {
-
-                // the input password
-                pw = document.getElementById("pw_input").value;
-
-            // Class Password implements the checks
-            var password = new PasswordChecker(pw);
-
+        function check_password() 
+        {
+            pw_input = document.getElementById("pw_input");
             result_list = document.getElementById("result_list");
 
-            // removes the list elements if exists
-            while (result_list.firstChild != null) {
+            pw_input.addEventListener("click", (x,y) => alert("hallo"));
+
+            var pw_checker = new PasswordChecker(pw_input.value);
+
+            while (result_list.firstChild != null)
+            {
                 result_list.removeChild(result_list.firstChild);
             }
 
-            // here we accumulate the overall strength
-            // it starts at zero
-            strength_accu = 0;
+            pw_checker.getChecks().forEach(
+                check => 
+                {
+                item = document.createElement("LI");
+                text = document.createTextNode(check.label);
 
-            // for each check of this password
-            // a check has a label and a value if its checks out
-            password.getChecks().forEach(
-                check => {
-                    // create a list item
-                    item = document.createElement("LI");
-                    text = document.createTextNode(check.label);
+                if (check.checksOut)
+                    color = "green";
+                else
+                    color = "red";
 
-                    // calculate color and strength
-                    if (check.checksOut) {
-                        color = "green";
-                        strength_accu++;
-                    }
-                    else
-                        color = "red";
+                item.style.color = color;
+                item.appendChild(text);
 
-                    // set the color of our list item
-                    item.style.color = color
+                result_list.appendChild(item);
 
-                    // add the text to our item
-                    item.appendChild(text);
-
-                    // add our item to the list
-                    result_list.appendChild(item);
-                }
+            }
             )
 
         }
@@ -63,8 +50,9 @@
     <p id="p_txt">
         Here you can check your password for stength. A good password should include:
     </p>
-
+    
     <ul id="result_list"></ul>
+
     <br>
         <div class="navbar">
             <a href="index.html">Home</a>
